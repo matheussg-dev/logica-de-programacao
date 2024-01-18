@@ -1,11 +1,11 @@
-alert('boas vindas ao jogo do numero secreto');
+alert('boas vindas ao jogo do numero secreto.');
 let numeroSecreto = 5;
 console.log(numeroSecreto);
 let chute;
 let tentativas = 1;
 
 while (chute != numeroSecreto){
-    chute = prompt('escolha um número 1 e 10');
+    chute = prompt('escolha um número 1 e 10.');
     if(chute == numeroSecreto){
         break;
     } else {
@@ -17,8 +17,5 @@ while (chute != numeroSecreto){
     tentativas++;
     }   
 }
-if(tentativas > 1){
-    alert(`você acertou ${numeroSecreto} com ${tentativas} tentativas.`);
-} else {
-    alert(`você acertou ${numeroSecreto} com ${tentativas} tentativa.`);
-}
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa';
+alert(`você acertou ${numeroSecreto} com ${tentativas} ${palavraTentativa}.`);
