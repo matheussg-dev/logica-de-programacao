@@ -1,10 +1,19 @@
 alert('boas vindas ao jogo do numero secreto');
 let numeroSecreto = 5;
-let escolha = prompt('escolha um número entre 1 e 10 ');
-console.log(numeroSecreto)
+console.log(numeroSecreto);
+let chute;
+let tentativas = 1;
 
-if(ecolha == numeroSecreto) {
-    alert(`você acertou ${numeroSecreto}`)
+while (chute != numeroSecreto){
+    chute = prompt('escolha um número 1 e 10');
+    if(chute == numeroSecreto){
+    alert(`você acertou ${numeroSecreto} com ${tentativas} tentativas`);
 } else {
-    alert('você errou')
+    if(chute > numeroSecreto){
+        alert(`o número e menor que a ${chute}`);
+    }else {
+        alert(`o número e maior que a ${chute}`);
+    }
+    tentativas++;
 }
+} 
